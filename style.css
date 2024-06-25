@@ -84,34 +84,35 @@ main {
 }
 
 /* Ventana emergente */
-
 .ventanaEmergente {
+    display: none; /* Oculto por defecto */
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
     padding: 20px;
-    border: 1px solid #FF00FF;
-    z-index: 2;
-    opacity: 1;
-    width: 15%; /* Ajusta según sea necesario */
-    max-width: 600px; /* Tamaño máximo */
+    border: 2px solid #FF00FF;
+    z-index: 2; /* Por encima del resto del contenido */
 }
+
+.ventanaEmergente .contenidoEmergente {
+    text-align: center;
+}
+
 /* Estilo para las imágenes emergentes */
 .imagenEmergente {
     display: inline-block;
-    margin: 10px 5px;
-    max-width: 100%; /* Ajusta el tamaño de las imágenes */
-    height: auto; /* Mantén la proporción */
+    margin: 10px 5px; /* Margen entre las imágenes */
+    max-width: 165px; /* Ajusta el tamaño máximo de las imágenes para teléfonos */
+    height: auto;
 }
 
 /* Flexbox para centrar el contenido de la ventana emergente */
 .ventanaEmergente .contenidoEmergente {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrado vertical */
-    justify-content: center;
+    align-items: center;
 }
 
 /* Estilo para el contenedor de imágenes */
@@ -121,7 +122,6 @@ main {
     align-items: center;
     margin-bottom: 20px; /* Espacio entre las imágenes y el botón */
 }
-
 
 /* Estilo para el botón */
 .botonCanjearAhora {
