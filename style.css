@@ -104,7 +104,7 @@ main {
 .imagenEmergente {
     display: inline-block;
     margin: 10px 5px; /* Margen entre las imágenes */
-    max-width: 165px; /* Ajusta el tamaño máximo de las imágenes para teléfonos */
+    max-width: 100px; /* Ajusta el tamaño máximo de las imágenes para teléfonos */
     height: auto;
 }
 
