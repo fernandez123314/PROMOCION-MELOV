@@ -1,0 +1,134 @@
+/* Establece el margen y el padding a cero para evitar espacios no deseados */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Elimina el espacio predeterminado entre elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Define la fuente personalizada */
+@font-face {
+    font-family: 'MiFuente';
+    src: url('/font/Happy.otf') format('opentype');
+}
+
+/* Haz que la imagen de fondo abarque toda la pantalla */
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+    opacity: 0.2; /* Ajusta la opacidad según sea necesario */
+}
+
+/* Centra el contenido vertical y horizontalmente */
+.mensaje, main, .contenedorCanjea {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: #FF00FF; /* Cambia el color del texto si es necesario */
+}
+
+.mensaje {
+    top: 20%; /* Ajusta según sea necesario para mover el h1 */
+    z-index: 1; /* Asegura que el mensaje esté por encima de la imagen */
+}
+
+main {
+    top: 50%; /* Ajusta según sea necesario para mover el main */
+    transform: translateY(-50%);
+    z-index: 1; /* Asegura que el main esté por encima de la imagen */
+}
+
+/* Estilo para el contenedor de canjea tu recompensa */
+.contenedorCanjea {
+    display: none; /* Oculta el contenedor por defecto */
+    top: 70%; /* Ajusta según sea necesario para mover el contenedor de canjea tu recompensa */
+    z-index: 1; /* Asegura que el contenedor esté por encima de la imagen */
+}
+
+
+/* Aplica la fuente personalizada al h1 */
+.mensaje h1 {
+    font-family: 'MiFuente', sans-serif;
+}
+
+/* Estilo de los botones */
+.contenedorBotones a {
+    display: block;
+    margin: 10px 0;
+    color: #FF00FF(15, 11, 11); /* Color del texto */
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.contenedorBotones a:hover {
+    color: rgb(7, 7, 6); /* Color del texto al pasar el mouse */
+}
+
+.fa-beat {
+    margin-right: 10px;
+}
+
+/* Ventana emergente */
+.ventanaEmergente {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 2px solid #FF00FF;
+    z-index: 2; /* Por encima del resto del contenido */
+}
+
+.ventanaEmergente .contenidoEmergente {
+    text-align: center;
+}
+
+/* Estilo para las imágenes emergentes */
+.imagenEmergente {
+    display: inline-block;
+    margin: 10px 5px; /* Margen entre las imágenes */
+    max-width: 165px; /* Ajusta el tamaño máximo de las imágenes para teléfonos */
+    height: auto;
+}
+
+/* Flexbox para centrar el contenido de la ventana emergente */
+.ventanaEmergente .contenidoEmergente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para el contenedor de imágenes */
+.imagenes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Espacio entre las imágenes y el botón */
+}
+
+/* Estilo para el botón */
+.botonCanjearAhora {
+    background-color: #FF00FF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px; /* Espacio encima del botón */
+}
