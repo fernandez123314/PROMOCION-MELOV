@@ -34,101 +34,86 @@ section img {
     opacity: 0.2; /* Ajusta la opacidad según sea necesario */
 }
 
-/* Centra el contenido vertical y horizontalmente */
-.mensaje, main, .contenedorCanjea {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    color: #FF00FF; /* Cambia el color del texto si es necesario */
-}
 
-.mensaje {
-    top: 20%; /* Ajusta según sea necesario para mover el h1 */
-    z-index: 1; /* Asegura que el mensaje esté por encima de la imagen */
-}
-
-main {
-    top: 50%; /* Ajusta según sea necesario para mover el main */
-    transform: translateY(-50%);
-    z-index: 1; /* Asegura que el main esté por encima de la imagen */
-}
-
-/* Estilo para el contenedor de canjea tu recompensa */
-.contenedorCanjea {
-    display: none; /* Oculta el contenedor por defecto */
-    top: 70%; /* Ajusta según sea necesario para mover el contenedor de canjea tu recompensa */
-    z-index: 1; /* Asegura que el contenedor esté por encima de la imagen */
-}
-
-
-/* Aplica la fuente personalizada al h1 */
-.mensaje h1 {
-    font-family: 'MiFuente', sans-serif;
-}
-
-/* Estilo de los botones */
-.contenedorBotones a {
-    display: block;
-    margin: 10px 0;
-    color: #FF00FF(15, 11, 11); /* Color del texto */
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-
-.contenedorBotones a:hover {
-    color: rgb(7, 7, 6); /* Color del texto al pasar el mouse */
-}
-
-.fa-beat {
-    margin-right: 10px;
-}
-
-/* Ventana emergente */
+/* Estilos para la ventana emergente */
 .ventanaEmergente {
-    display: none; /* Oculto por defecto */
+    display: none; /* Oculta la ventana por defecto */
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    border: 2px solid #FF00FF;
-    z-index: 2; /* Por encima del resto del contenido */
-}
-
-.ventanaEmergente .contenidoEmergente {
-    text-align: center;
-}
-
-/* Estilo para las imágenes emergentes */
-.imagenEmergente {
-    display: inline-block;
-    margin: 10px 5px; /* Margen entre las imágenes */
-    max-width: 100px; /* Ajusta el tamaño máximo de las imágenes para teléfonos */
-    height: auto;
-}
-
-/* Flexbox para centrar el contenido de la ventana emergente */
-.ventanaEmergente .contenidoEmergente {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Estilo para el contenedor de imágenes */
-.imagenes-container {
-    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+    z-index: 1000;
+    display: flex; /* Utiliza flex para centrar el contenido */
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px; /* Espacio entre las imágenes y el botón */
 }
 
-/* Estilo para el botón */
+.contenidoEmergente {
+    background-color: #e4e3e4;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contenidoEmergente p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.imagenes-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.imagenEmergente {
+    width: 30%; /* Ajusta el ancho de las imágenes */
+    height: auto;
+    border-radius: 5px;
+}
+
 .botonCanjearAhora {
-    background-color: #FF00FF;
+    background-color: #7f2baf; /* Color verde */
     color: white;
     border: none;
     padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px; /* Espacio encima del botón */
+}
+
+.botonCanjearAhora:hover {
+    background-color: #9e2b7b; /* Color verde más oscuro al pasar el mouse */
+}
+
+/* Media queries para hacer el diseño responsive */
+@media (max-width: 768px) {
+    .contenidoEmergente {
+        width: 90%;
+    }
+    
+    .imagenEmergente {
+        width: 45%; /* Ajusta el ancho de las imágenes */
+    }
+}
+
+@media (max-width: 480px) {
+    .contenidoEmergente {
+        width: 95%;
+    }
+    
+    .imagenEmergente {
+        width: 80%; /* Ajusta el ancho de las imágenes */
+        margin-bottom: 10px; /* Añade espacio entre las imágenes */
+    }
+
+    .imagenes-container {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        align-items: center;
+    }
 }
