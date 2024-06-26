@@ -8,6 +8,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Añade el evento de clic al botón "Canjear ahora"
     botonCanjearAhora.addEventListener('click', () => {
         // Redirige a un enlace
-        window.location.href = 'https://wa.me/+59172954544/?text=Deceo%20canjear%20mi%20descuento'; // Cambia este enlace por el que desees
+        window.location.href = 'https://wa.me/+59172954544/?text=Quiero%20canjear%20mi%20descuento%20%F0%98%82%A9'; // Cambia este enlace por el que desees
     });
 });
